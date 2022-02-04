@@ -1,5 +1,11 @@
 const url= "https://platzi-avo.vercel.app"
 const appNode=document.querySelector('#app')
+//Delegacion de eventos (el padre #app es el que escucha todo)
+appNode.addEventListener('click',(evento)=>{
+    if(evento.target.nodeName==='H2'){
+        window.alert('Se ha dado un click en un h2')
+    }
+})
 
 //internacionalicación moneda
 const formatPrice=price=>{
