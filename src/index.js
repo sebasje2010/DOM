@@ -40,7 +40,7 @@ async function fetchData() {
 
         //Wrap image and priceAndTitle
         const card=document.createElement('div')
-        card.className='md:flex bg-white rounded-lg p-6 hover:bg-gray-300'
+        card.className='md:flex bg-white border-solid border-2 border-green-700 rounded-lg p-6 hover:bg-gray-300'
         card.append(image,priceAndTitle)
 
         const container=document.createElement('div')
@@ -48,5 +48,6 @@ async function fetchData() {
         allItems.push(container)
     });
     appNode.append(...allItems)
+    appNode.className='mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2'
 }
 fetchData()
